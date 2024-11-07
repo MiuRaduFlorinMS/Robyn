@@ -807,6 +807,7 @@ prophet_decomp <- function(dt_transform, dt_holidays,
   check_prophet(dt_holidays, prophet_country, prophet_vars, prophet_signs, dayInterval)
   recurrence <- select(dt_transform, .data$ds, .data$dep_var) %>% rename("y" = "dep_var")
   holidays <- set_holidays(dt_transform, dt_holidays, intervalType)
+  print(holidays)
   use_trend <- "trend" %in% prophet_vars
   use_holiday <- "holiday" %in% prophet_vars
   use_season <- "season" %in% prophet_vars | "yearly.seasonality" %in% prophet_vars
