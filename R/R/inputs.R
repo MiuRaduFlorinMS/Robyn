@@ -331,6 +331,7 @@ robyn_inputs <- function(dt_input = NULL,
       calibration_input = calibration_input,
       custom_params = list(...)
     )
+    print(InputCollect)
 
     if (!is.null(hyperparameters)) {
       ### Conditional output 1.2
